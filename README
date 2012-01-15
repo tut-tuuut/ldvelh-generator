@@ -1,0 +1,10 @@
+LDVELH (Livre dont vous êtes le héros) generator
+
+What I want this project to be:
+- a simple WYSIWYG (more or less) editor for creating LDVELHs easily
+- an interface to play to the created LDVELH(s)
+
+To do:
+- find how to say LDVELH in English in order to have a proper documentation ><
+- decide on a means to store data (database structure)
+- find my old CSS "old book style" project

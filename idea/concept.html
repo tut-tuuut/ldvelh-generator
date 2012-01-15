@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LDVELH generator - Ideas</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            h1,h2,h3 {
+                font-family: Arial,Helvetica,sans-serif;
+            }
+            h1 {
+                border-bottom: 3px solid;
+            }
+            h2 {
+                background: #ccc;
+                border-bottom: 2px solid;
+            }
+            h3 {
+                border-bottom: 1px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>LDVELH generator - Ideas</h1>
+        
+        <h2>Backoffice</h2>
+        
+        <h3>Viewing the whole book</h3>
+        <p>
+            Pages are displayed in a tree, with arrows showing the path from pages to others.
+            You can see information on pages on when your mouse hovers or clicks on them.
+        </p>
+        <p>
+            Extra project in far future: adding links between pages from this "tree view".
+        </p>
+        
+        <h3>Editing the wole book options</h3>
+        <p>
+            You can edit book title, book cover, book summary… but you can edit more technical options too :
+            allow button "cheat" (or "previous page") by default, etc.
+        </p>
+        <h3>Editing one page</h3>
+        <p>
+            <img src="editor-onepage.png" alt="editor-one page" />
+        </p>
+        <p>
+            Todo: decide how to…
+        </p>
+        <ul>
+            <li>allow inventory modification (add or remove an object),</li>
+            <li>add conditions on inventory (e.g. display choice Z only if X in inventory),</li>
+            <li>add monsters / cute things to do,</li>
+            <li>add random events on page display / page choices.</li>
+        </ul>
+        <h3>Editing character / inventory</h3>
+        <p>To do</p>
+        <h2>Frontoffice</h2>
+        <p>
+            Displays current page & current state of character (HP, MP, objects).
+        </p>
+        <p>
+            Todo: think about fighting & random events (truly random, or based on some character statistics ?).
+        </p>
+        <h2>DB Storage</h2>
+        <p>
+            Character data/state: stored in the browser localstorage to avoid session storage on server? (Think to server-side validation, though…)
+        </p>
+        <p>
+            Book storage structure idea:
+        </p>
+        <ul>
+            <li>
+                <b>Book</b>
+            </li>
+            <li>
+                <b>Page</b> : book ID, page ID, title, description, meta (random, conditions, etc.) (primary key: page ID)
+            </li>
+            <li>
+                <b>Choice</b> : page ID, choice ID, description, target, meta (random, conditions, etc.) (primary key: page ID + choice ID)
+            </li>
+        </ul>
+    </body>
+</html>
